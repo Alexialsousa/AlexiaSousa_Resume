@@ -2,7 +2,7 @@
   <v-app>
     <v-main>
       <Navbar/>
-      <router-view/>
+      <router-view class="animate__animated animate__fadeInLeft animate__faster"/>
     </v-main>
   </v-app>
 </template>
