@@ -99,6 +99,5 @@ li {
     flex-direction: row;
     justify-content: center;
     text-align: center;
-
 }
 </style>
