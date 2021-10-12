@@ -37,6 +37,10 @@ export default {
 </script>
 
 <style>
+* {
+  font-family: sans-serif;
+}
+
 .profile {
     width: 19em;
     height: 19em;

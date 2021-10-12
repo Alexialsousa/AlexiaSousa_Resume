@@ -93,6 +93,10 @@ export default {
 </script>
 
 <style scoped>
+* {
+  font-family: sans-serif;
+}
+
 img {
     height: 2em;
     width: 4em;
