@@ -20,7 +20,7 @@
                 <img src="../assets/fonex.png" />
             </div>
         </v-card-title>
-
+        <br>
         <v-card-subtitle>
             {{item.date}}
         </v-card-subtitle>
@@ -28,7 +28,7 @@
         <v-card-text class="white text--primary text">
             <pre><br><b>{{item.position}}</b><br>{{item.text}}</pre>
         </v-card-text>
-        <v-container class="container">
+        <v-container class="container hidden-sm-and-down">
             <div v-for="image in item.images" :key="image">
                 <img v-bind:src="image" alt="picture" class="animate__animated animate__bounce logos" />
             </div>
@@ -94,7 +94,7 @@ export default {
 
 <style scoped>
 * {
-  font-family: sans-serif;
+    font-family: sans-serif;
 }
 
 img {
@@ -111,11 +111,16 @@ img {
 .v-card__subtitle,
 .v-card__text,
 .v-card__title {
-    margin-inline: 1em;
+    font-size: 1rem;
 }
 
 .v-card__title {
     margin-top: 3em;
+}
+
+pre {
+    overflow: hidden;
+    white-space: pre-wrap;
 }
 
 .logos {
