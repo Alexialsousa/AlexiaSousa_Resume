@@ -5,11 +5,13 @@
             Bachelor of Software Engineering
         </v-card-title>
 
+        <img src="../assets/concordia.jpeg" width="185em" height="75em" style="display:block; margin-left:3em">
+
         <v-card-subtitle>
             2019-2023
         </v-card-subtitle>
 
-        <v-card-text class="white text--primary text">
+        <v-card-text class="white text--primary">
             <pre><br><b>Concordia University CO-OP</b><br>Montreal, Qc<br>GPA: 3.5<br>
             <div class="container">
             <ul class="list">
@@ -32,11 +34,13 @@
             DEC in Pure and Applied Science
         </v-card-title>
 
+        <img src="../assets/mari.jpeg" width="150em" height="100em">
+
         <v-card-subtitle>
             2017-2019
         </v-card-subtitle>
 
-        <v-card-text class="white text--primary text">
+        <v-card-text class="white text--primary">
             <pre><br><b>Marianopolis College</b><br>Montreal, Qc<br></pre>
         </v-card-text>
     </v-card>
@@ -50,7 +54,7 @@
             2012-2017
         </v-card-subtitle>
 
-        <v-card-text class="white text--primary text">
+        <v-card-text class="white text--primary">
             <pre><br><b>Vincent Massey Collegiate</b><br>Montreal, Qc<br><br>- Graduated with high honours (87% global average)<br> - Obtained bilingual certificate (English and French)</pre>
         </v-card-text>
     </v-card>
@@ -68,20 +72,33 @@ export default {
     font-family: sans-serif;
 }
 
+pre {
+    overflow: hidden;
+    white-space: pre-wrap;
+}
+
+@media (max-width: 480px) {
+    .list {
+        margin: 0 !important;
+    }
+}
+
 .list {
     display: table;
-    text-align: justify;
+    text-align: left;
     margin: auto;
 }
 
 li {
     margin-bottom: 1em;
 }
+
 .container {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     text-align: center;
+
 }
 </style>
