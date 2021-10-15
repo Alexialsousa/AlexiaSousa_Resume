@@ -14,10 +14,10 @@
         <a class="nav-link" href="/Education">Education</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/Work">Work</a>
+        <a class="nav-link" href="/Work">Work Experience</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/Interests">Interests</a>
+        <a class="nav-link" href="/VolunteerWorkandAwards">Volunteer Work & Awards</a>
       </li>
     </ul>
   </div>
@@ -45,5 +45,6 @@ export default {
             color: black !important;
             font-size: 1.1em;
             font-weight: bold;
+            padding-right: 1em !important;
 }
 </style>

@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../components/Home'
 import Education from '../components/Education'
 import Work from '../components/Work'
-import Interests from '../components/Interests'
+import VolunteerWorkandAwards from '../components/VolunteerWorkandAwards'
 
 Vue.use(VueRouter);
 
@@ -24,9 +24,9 @@ const routes = [
         component: Work
     },
     {
-        name: 'Interests',
-        path: '/Interests',
-        component: Interests
+        name: 'VolunteerWorkandAwards',
+        path: '/VolunteerWorkandAwards',
+        component: VolunteerWorkandAwards
     },
 
 ];
