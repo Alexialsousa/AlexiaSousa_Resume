@@ -3,24 +3,10 @@
     <v-card class="elevation-2 card" v-for="(item, i) in items" :key="i">
         <v-card-title>
             {{item.title}}
-
-            <div v-if="item.title=='Canadian Space Agency'">
-                <img src="../assets/CSA/csa.png" style="height: 3em" />
-            </div>
-
-            <div v-if="item.title=='Matrox Electronic Systems'">
-                <img src="../assets/Matrox/matrox.png" />
-            </div>
-
-            <div v-if="item.title=='La Boite aux Huîtres'">
-                <img src="../assets/lbah.jpeg" />
-            </div>
-
-            <div v-if="item.title=='Fonex Data Systems'">
-                <img src="../assets/fonex.png" />
-            </div>
+            <img :src="item.url" :style="item.style" />
         </v-card-title>
         <br>
+
         <v-card-subtitle>
             {{item.date}}
         </v-card-subtitle>
@@ -51,6 +37,10 @@ import gitlab from '@/assets/CSA/gitlab.png';
 import testrail from '@/assets/Matrox/testrail.png';
 import jira from '@/assets/Matrox/jira.png';
 import linux from '@/assets/Matrox/linux.jpeg';
+import csa from '@/assets/CSA/csa.png';
+import lbah from '@/assets/lbah.jpeg';
+import matrox from '@/assets/Matrox/matrox.png';
+import fonex from '@/assets/fonex.png';
 
 export default {
     name: 'Work',
@@ -58,6 +48,11 @@ export default {
         return {
             items: [{
                     title: 'Canadian Space Agency',
+                    url: csa,
+                    style: {
+                        height: '5em',
+                        width: '7em'
+                    },
                     date: 'May 2021 - August 2021',
                     position: 'SOFTWARE ENGINEERING INTERN\n',
                     text: "• Implemented features in my team's EGI Tools Support application using Vue.js, Javascript, Java and Spring\n" +
@@ -67,6 +62,11 @@ export default {
                 },
                 {
                     title: 'Matrox Electronic Systems',
+                    url: matrox,
+                    style: {
+                        height: '3em',
+                        width: '5em'
+                    },
                     date: 'September 2020 - December 2020',
                     position: 'SOFTWARE QUALITY ASSURANCE INTERN\n',
                     text: "• Worked in the SQA department where I performed quality checks on company video cards",
@@ -74,12 +74,22 @@ export default {
                 },
                 {
                     title: 'La Boite aux Huîtres',
+                    url: lbah,
+                    style: {
+                        height: '3em',
+                        width: '6em'
+                    },
                     date: 'May 2019 - April 2020',
                     position: 'CASHIER/WAITRESS\n',
                     text: "• Operated the cash register\n \n• Fulfilled customer orders (shucked and served oysters)",
                 },
                 {
                     title: 'Fonex Data Systems',
+                    url: fonex,
+                    style: {
+                        height: '4em',
+                        width: '7em'
+                    },
                     date: 'Summer 2015 & 2016',
                     position: 'OFFICE ASSOCIATE\n',
                     text: "• Assisted production engineers to document processes related to inventory picking and product labeling \n" +
