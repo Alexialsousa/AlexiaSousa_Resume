@@ -13,25 +13,26 @@
                 </template>
             </v-img>
 
-            <!-- Dialog Button-->
-            <v-btn text @click.stop="dialogConUHacks = true" height="inherit" class="buttonDialog">
-                {{item.name}}
-            </v-btn>
+            <v-dialog transition="dialog-bottom-transition" max-width="50em">
 
-            <!-- Dialog -->
-            <v-dialog v-model="dialogConUHacks" transition="dialog-bottom-transition" max-width="50em">
-                <v-card>
-                    <v-card-title> {{item.name}}
+                <template v-slot:activator="{ on, attrs }">
+                    <v-btn text height="inherit" class="buttonDialog" v-bind="attrs" v-on="on">{{item.name}}</v-btn>
+                </template>
+
+                <template v-slot:default="dialog">
+                    <v-card>
+                        <v-card-title> {{item.name}}
                         </v-card-title>
                         <v-card-subtitle> {{item.date}}
                         </v-card-subtitle>
-                    <v-card-text>
-                        <div class="pa-12">{{item.text}}</div>
-                    </v-card-text>
-                    <v-card-actions class="justify-end">
-                        <v-btn text @click="dialogConUHacks = false">Close</v-btn>
-                    </v-card-actions>
-                </v-card>
+                        <v-card-text>
+                            <div class="pa-12">{{item.text}}</div>
+                        </v-card-text>
+                        <v-card-actions class="justify-end">
+                            <v-btn text @click="dialog.value = false">Close</v-btn>
+                        </v-card-actions>
+                    </v-card>
+                </template>
             </v-dialog>
 
         </v-row>
@@ -48,16 +49,8 @@ import costarica from "../assets/costarica.jpeg"
 
 export default {
     name: 'VolunteerWorkandAwards',
-    methods: {
-        openDialog() {
-
-            this.dialogConUHacks = true;
-
-        },
-    },
     data() {
         return {
-            dialogConUHacks: false,
             items: [{
                     url: conuhacks,
                     name: "ConUHacks V",
@@ -68,19 +61,19 @@ export default {
                     url: muhc,
                     name: "Montreal Children's Hospital",
                     date: "2018-2019",
-                    text: "• Managed the distribution of toys to children in the emergency waiting room \n\n• Interacting with children and keeping them company in the waiting area",
+                    text: "I managed the distribution of toys to children in the emergency waiting room and interacted with the children and keeping them company while they waited",
                 },
                 {
                     url: mfat,
                     name: "Marianopolis First Aid Team",
                     date: "2017-2019",
-                    text: "• Monitor activities in the gymnasium and fitness centre in case of accidents and be available in the first aid room to help with minor injuries",
+                    text: "I monitored activities in the gymnasium and fitness centre in case of accidents and was available in the first aid room to help with minor injuries",
                 },
                 {
                     url: costarica,
                     name: "Costa Rica Service Trip",
                     date: "February 2017",
-                    text: "• Raised $4500 in Montreal to purchase goods for distribution in Costa Rica \n\n• Volunteered at the Asociación Obras del Espíritu Santo orphanage \n\n• Planted trees and entertained the children at Chachagua Primary School",
+                    text: "We raised $4500 in Montreal to purchase goods for distribution in Costa Rica. \n\n I volunteered at the Asociación Obras del Espíritu Santo orphanage and planted trees and entertained the children at Chachagua Primary School",
                 },
             ]
         }
@@ -91,6 +84,12 @@ export default {
 <style scoped>
 * {
     font-family: sans-serif;
+}
+
+.v-card__subtitle,
+.v-card__text,
+.v-card__title {
+    white-space: pre-line;
 }
 
 .col {
@@ -111,9 +110,9 @@ export default {
 }
 
 .buttonDialog {
-    padding-top: inherit ;
-    margin-top: 1em ;
-    background-color: lightgrey ;
+    padding-top: inherit;
+    margin-top: 1em;
+    background-color: lightgrey;
     min-height: 2em;
     max-width: 85%;
 }
