@@ -5,7 +5,7 @@
             Bachelor of Software Engineering
         </v-card-title>
 
-        <img src="../assets/concordia.jpeg" width="185em" height="75em" style="display:block; margin-left:3em">
+        <img src="../assets/concordia.jpeg" width="250em" height="75em">
 
         <v-card-subtitle>
             2019-2023
