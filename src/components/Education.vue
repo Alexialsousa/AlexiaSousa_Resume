@@ -94,7 +94,7 @@ pre {
 .list {
     display: table;
     text-align: left;
-    margin: auto;
+    margin: 2em;
 }
 
 li {
@@ -107,5 +107,6 @@ li {
     flex-direction: row;
     justify-content: center;
     text-align: center;
+    padding: 0;
 }
 </style>
