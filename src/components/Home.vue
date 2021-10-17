@@ -13,7 +13,7 @@
         <h4 style="color: black">I'm a passionate Software Engineering Student at Concordia University
             looking to gain knowledge and hands on experience in the programming world.
         </h4>
-        <v-btn class="ma-5 btn-grad" outlined href="AlexiaSousa_Resume.pdf" download>
+        <v-btn class="ma-5 btn-grad" outlined href="Alexia_Sousa's_Resume.pdf" download>
             Download Resume
         </v-btn>
     </v-container>
