@@ -1,7 +1,7 @@
 <template>
 <div>
     <v-card class="elevation-2 card" v-for="(item, i) in items" :key="i">
-        <v-card-title>
+        <v-card-title style="font-size: 1.5rem">
             {{item.title}}
             <img :src="item.url" :style="item.style" />
         </v-card-title>
@@ -122,6 +122,7 @@ img {
 .v-card__text,
 .v-card__title {
     font-size: 1rem;
+    display: flow-root;
 }
 
 .v-card__title {
@@ -145,5 +146,6 @@ pre {
     flex-direction: row;
     justify-content: center;
     text-align: center;
+    padding-bottom: 2em;
 }
 </style>
