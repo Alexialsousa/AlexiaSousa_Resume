@@ -93,7 +93,7 @@ export default {
 }
 
 .col {
-    max-width: 75%;
+    max-width: 85%;
     margin: auto;
     overflow: hidden;
     justify-content: center;
