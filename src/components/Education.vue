@@ -50,6 +50,8 @@
             High School Diploma
         </v-card-title>
 
+        <img src="../assets/vmc.jpeg" width="150em" height="115em">
+
         <v-card-subtitle>
             2012-2017
         </v-card-subtitle>
@@ -75,6 +77,12 @@ export default {
 pre {
     overflow: hidden;
     white-space: pre-wrap;
+}
+
+.v-card__subtitle,
+.v-card__text,
+.v-card__title {
+    display: inherit;
 }
 
 @media (max-width: 480px) {
